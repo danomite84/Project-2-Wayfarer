@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+import django_on_heroku
+
 from pathlib import Path
 from pathlib import os
 
@@ -143,3 +145,5 @@ EMAIL_HOST_USER = 'wayfarer.project.sei@gmail.com'
 EMAIL_HOST_PASSWORD = 'wayfarer1!'
 DEFAULT_FROM_EMAIL = 'Wayfarer'
 DEFAULT_TO_EMAIL = 'wayfarer.project.sei'
+
+django_on_heroku.settings(locals())
